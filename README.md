@@ -44,11 +44,7 @@ App.getUserAppDataDir()
 │   │   │
 │   │   ├── Init.py
 │   │   │
-│   │   ├── InitGui.py
-│   │   │
-│   │   ├── README.md
-│   │   │
-│   │   └── dummy.py
+│   │   └── etc.
 │   │
 ```
 
