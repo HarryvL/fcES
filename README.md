@@ -4,7 +4,7 @@ Finite element analysis of beams on elastic foundation and axi-symmetrically loa
 ### Background
 fcES is based on an exact finite element for the bending of beams on elastic foundation as described in the documentation included in this repository.
 
-<img src="https://github.com/HarryvL/fcVM-workbench/blob/main/pictures/Plate_with_hole_Example_Load_Displacement.png" height="250"/><img src="https://github.com/HarryvL/fcES/blob/main/pictures/fcES_window.png" height="200"/>
+<img src="https://github.com/HarryvL/fcES/blob/main/pictures/fcES_window.png" height="200"/>
 
 ### Prerequisites
 * FreeCAD >= v0.19
