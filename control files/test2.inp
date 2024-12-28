@@ -1,4 +1,4 @@
-analysis_type = tank
+analysis_type = beam
 num_el = 1
 node 1: 0 y n 0.0 1
 node 2: 1 y n 0.0 0
