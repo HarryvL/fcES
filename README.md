@@ -4,7 +4,7 @@ Finite element analysis of beams on elastic foundation and axi-symmetrically loa
 ### Background
 fcES is based on an exact finite element for the bending of beams on elastic foundation as described in the documentation included in this repository.
 
-<img src="https://github.com/HarryvL/fcES/blob/main/pictures/fcES_window.png" height="200"/>
+<img src="https://github.com/HarryvL/fcES/blob/main/pictures/fcES_window.png" height="400"/>
 
 ### Prerequisites
 * FreeCAD >= v0.19
@@ -52,7 +52,7 @@ App.getUserAppDataDir()
 │   │
 ```
 
-<img src="https://github.com/HarryvL/fcES/blob/main/pictures/beam_results.png" height="250"/><img>
+<img src="https://github.com/HarryvL/fcES/blob/main/pictures/beam_results.png" height="40"/><img>
 
 ### Dependencies
 fcES only imports matplotlib, which is already available in the FreeCAD environment.
@@ -60,7 +60,7 @@ fcES only imports matplotlib, which is already available in the FreeCAD environm
 ### Documentation
 See the document entitled Beam_on_Elastic_Foundation.pdf in the documentation folder of this repository.
 
-<img src="https://github.com/HarryvL/fcES/blob/main/pictures/tank_results.png" height="250"/><img>
+<img src="https://github.com/HarryvL/fcES/blob/main/pictures/tank_results.png" height="40"/><img>
 
 ### Current Limitations
 N/A 
