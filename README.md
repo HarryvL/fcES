@@ -52,7 +52,7 @@ App.getUserAppDataDir()
 │   │
 ```
 
-<img src="https://github.com/HarryvL/fcES/blob/main/pictures/beam_results.png" height="40"/><img>
+<img src="https://github.com/HarryvL/fcES/blob/main/pictures/beam_results.png" height="400"/><img>
 
 ### Dependencies
 fcES only imports matplotlib, which is already available in the FreeCAD environment.
@@ -60,7 +60,7 @@ fcES only imports matplotlib, which is already available in the FreeCAD environm
 ### Documentation
 See the document entitled Beam_on_Elastic_Foundation.pdf in the documentation folder of this repository.
 
-<img src="https://github.com/HarryvL/fcES/blob/main/pictures/tank_results.png" height="40"/><img>
+<img src="https://github.com/HarryvL/fcES/blob/main/pictures/tank_results.png" height="400"/><img>
 
 ### Current Limitations
 N/A 
