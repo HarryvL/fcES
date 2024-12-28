@@ -1,5 +1,5 @@
 # fcES-workbench
-Finite element analysis of beams on elastic foundation and axi-symmetrically loaded cylindrical tanks and silos [FreeCAD](https://freecad.org)
+Finite element analysis of beams on elastic foundation and axi-symmetrically loaded cylindrical tanks and silos in [FreeCAD](https://freecad.org)
 
 ### Background
 fcES is based on an exact finite element for the bending of beams on elastic foundation as described in the documentation included in this repository.
