@@ -1,0 +1,24 @@
+beam # analysis type "beam" or "shell"
+1 # number of elements (number of nodes is 1 more)
+# for all nodes (=elements+1):
+0.0 # z0
+1.0 # z1
+0.0 # Q1
+0.0 # M1
+0.0 # Q2
+0.0 # M2
+y # fixw1
+n # fixphi1
+y # fix2 
+n # fixphi2
+# for all elements:
+1.0 # q1
+1.0 # q2
+# if type =="beam"
+1.0 # EI1
+1.0 # k1
+# elif type == "shell"
+10000.0 # R1
+210000.0 # E1
+0.3 # nu1
+5.0 # t1

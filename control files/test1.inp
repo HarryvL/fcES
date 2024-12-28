@@ -1,0 +1,15 @@
+analysis_type = tank
+num_el = 4
+node 1: 0.0 y n 0.0 0.0
+node 2: 1.0 y n 0.0 0.0
+node 3: 2.0 y n 0.0 0.0
+node 4: 2.0 y n 0.0 0.0
+node 5: 2.0 y n 0.0 0.0
+beam 1: 1 1 1 1
+beam 2: 1 1 1 1
+beam 3: 1 1 1 1
+beam 4: 1 1 1 1
+tank 1: 1.0 1 1 0.3 1 1
+tank 2: 1.0 1 1 0.3 1 1
+tank 3: 1.0 1 1 0.3 1 1
+tank 4: 1.0 1 1 0.3 1 1
