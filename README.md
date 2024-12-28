@@ -1,48 +1,45 @@
-# fcVM-workbench
-Finite element collapse analysis based on the von Mises plasticity model for use with [FreeCAD](https://freecad.org)
-
-<img src="https://github.com/HarryvL/fcVM-workbench/blob/main/pictures/Embankment_with_Ditch_Example_Load_Displacement.png" height="250"/> <img src="https://github.com/HarryvL/fcVM/blob/main/pictures/Embankment_with_Ditch_Example_Failure_Mechanism.png" height="220" raw=true/> 
+# fcES-workbench
+Finite element analysis of beams on elastic foundation and axi-symmetrically loaded cylindrical tanks and silos in [FreeCAD](https://freecad.org)
 
 ### Background
-fcVM is a finite element workbench and solver for performing collapse analysis of structures and soil bodies. It is based on the theory of elastoplasticity and gives insight in ductility and reserve strength beyond first yield. The theory underpinning fcVM can be found in the document included in this repository.
+fcES is based on an exact finite element for the bending of beams on elastic foundation as described in the documentation included in this repository.
 
-<img src="https://github.com/HarryvL/fcVM-workbench/blob/main/pictures/Plate_with_hole_Example_Load_Displacement.png" height="250"/><img src="https://github.com/HarryvL/fcVM-workbench/blob/main/pictures/Plate_with_hole_Example_Failure_Mechanism.png" height="200"/>
+<img src="https://github.com/HarryvL/fcES/blob/main/pictures/fcES_window.png" height="400"/>
 
 ### Prerequisites
 * FreeCAD >= v0.19
 
 ### Installation
-1. Create a fcVM-workbench directory in the FreeCAD Mod directory, the location of which can be found by typing App.getUserAppDataDir() in the FreeCAD python console.
-1. Copy the entire fcVM-workbench repository into this new fcVM-workbench directory.
+1. Create a fcES-workbench directory in the FreeCAD Mod directory, the location of which can be found by typing App.getUserAppDataDir() in the FreeCAD python console.
+1. Copy the entire fcES-workbench repository into this new fcES-workbench directory.
 1. Restart FreeCAD
-1. If all went well, the fcVM workbench should now be an option in the FreeCAD workbench dropdown menu
+1. If all went well, the fcES workbench should now be an option in the FreeCAD workbench dropdown menu
 
 ```bash
 App.getUserAppDataDir()
 ├── Mod
-│   ├── fcVM-workbench
+│   ├── fcES-workbench
 │   │   ├── control files
-│   │   │   ├── Block_Disp_Control_Example.inp
+│   │   │   ├── case_19a.inp
 │   │   │   └── etc.
 │   │   ├── documentation
-│   │   │   └── Numerical Analysis of Soil Structure Interaction HvL.PDF
+│   │   │   └── Beam_on_Elastic_Foundation.pdf
 │   │   ├── freeCAD files
-│   │   │   ├── Block_Disp_Control_Example.FCStd
+│   │   │   ├── test1.FCStd
 │   │   │   └── etc.
 │   │   ├── icons
 │   │   │   └── fcFEM.svg
 │   │   ├── output files
-│   │   │   ├── Block_Disp_Control_Example.out
+│   │   │   ├── test1.es
 │   │   │   └── etc.
 │   │   ├── pictures
-│   │   │   ├── Embankment_with_Ditch_Example_Failure_Mechanism.png
+│   │   │   ├── beam_results.png
 │   │   │   └── etc.
 │   │   ├── source code
 │   │   │   ├── .gitignore
-│   │   │   ├── fcVM.FCMacro
-│   │   │   └── fcVM.py
+│   │   │   └── fcES.FCMacro
 │   │   ├── user_interface
-│   │   │   └── fcVM.ui
+│   │   │   └── fcES.ui
 │   │   ├── .gitignore
 │   │   │
 │   │   ├── Init.py
@@ -55,29 +52,18 @@ App.getUserAppDataDir()
 │   │
 ```
 
-<img src="https://github.com/HarryvL/fcVM-workbench/blob/main/pictures/Pit_Example_Load_Displacement.png" height="250"/><img src="https://github.com/HarryvL/fcVM-workbench/blob/main/pictures/Pit_Example_Failure_Mechanism.png" height="250"/>
+<img src="https://github.com/HarryvL/fcES/blob/main/pictures/beam_results.png" height="600"/><img>
 
 ### Dependencies
-fcVM imports (from) the following packages: numpy, scipy (version 1.11.3), numba, matplotlib, scikit-sparse, pyvista and meshio. On Linux and Mac-OS systems these can be installed with the usual package managers (e.g. conda or mamba). On Windows this requires more effort:
-1. download Miniforge3: [Miniforge3](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe)
-1. run the installer: Miniforge3-Windows-x86_64.exe
-1. find and run Miniforge on your system - this opens a Miniforge Prompt: (base) C:\"path">
-1. create a new virtual environment: (base) C:\"path"> mamba create --name fcVM (or any other name of your choice)
-1. change into the new environment: (base) C:\"path"> mamba activate fcVM (or the other name you chose)
-1. instal freeCAD and dependencies: (fcVM) C:\"path"> mamba install freecad scipy=1.11.3 numba matplotlib scikit-sparse pyvista meshio (with spaces and no commas)
-1. check with python if the dependencies can be imported: (fcVM) C:\"path"> python
-1. \>>> import scipy.sparse
-1. \>>> import sksparse.cholmod
-1. if no problems, quit python and start freecad: (fcVM) C:\"path"> freecad
-1. if you encounter a "black screen" then follow the advice [here](https://forum.freecad.org/viewtopic.php?t=36087&start=40#p669458), i.e. rename all opengl32sw.dll files on your system to opengl32.dll
+fcES only imports matplotlib, which is already available in the FreeCAD environment.
 
 ### Documentation
-Please refer to source code for in-line comments and to the FreeCAD forum (TBC)
+See the document entitled Beam_on_Elastic_Foundation.pdf in the documentation folder of this repository.
 
-<img src="https://github.com/HarryvL/fcVM-workbench/blob/main/pictures/Tubes_Example_Load_Displacement.png" height="250"/><img src="https://github.com/HarryvL/fcVM-workbench/blob/main/pictures/Tubes_Example_Failure_Mechanism.png" height="200"/>
+<img src="https://github.com/HarryvL/fcES/blob/main/pictures/tank_results.png" height="600"/><img>
 
 ### Current Limitations
-fcVM only works with 2nd order volumetric meshes generated with GMSH or Netgen (10-noded tetrahedrals). 
+N/A 
 
 ### Licence information
 
