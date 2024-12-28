@@ -216,7 +216,7 @@ def output(num_el, analysis_type, node_obj, beam_obj, tank_obj, a):
         axes[3].grid(True, linestyle='-', alpha=1.0)
         axes[3].set_xlabel('z', fontsize=14)
         axes[3].set_ylabel('sig/|sig|ₘₐₓ', fontsize=14)
-        axes[3].set_title(r'bending stress |sig|$_{{\text{{max}}}}$ = {0:.4e}'.format(M_m), fontsize=14)
+        axes[3].set_title(r'bending stress |sig|$_{{\text{{max}}}}$ = {0:.4e}'.format(6*M_m/t**2), fontsize=14)
         axes[3].invert_yaxis()
 
     for ax in axes:
