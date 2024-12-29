@@ -44,18 +44,14 @@ App.getUserAppDataDir()
 │   │   │
 │   │   ├── Init.py
 │   │   │
-│   │   ├── InitGui.py
-│   │   │
-│   │   ├── README.md
-│   │   │
-│   │   └── dummy.py
+│   │   └── etc.
 │   │
 ```
 
 <img src="https://github.com/HarryvL/fcES/blob/main/pictures/beam_results.png" height="600"/><img>
 
 ### Dependencies
-fcES only imports matplotlib, which is already available in the FreeCAD environment.
+fcES only imports numpy and matplotlib, which are already available in the FreeCAD environment.
 
 ### Documentation
 See the document entitled Beam_on_Elastic_Foundation.pdf in the documentation folder of this repository.
