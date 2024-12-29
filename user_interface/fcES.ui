@@ -117,7 +117,7 @@
               <x>9</x>
               <y>9</y>
               <width>543</width>
-              <height>531</height>
+              <height>600</height>
              </rect>
             </property>
             <property name="sizePolicy">
@@ -376,11 +376,11 @@
                <property name="maximumSize">
                 <size>
                  <width>16777215</width>
-                 <height>130</height>
+                 <height>170</height>
                 </size>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="Beam">
                 <attribute name="title">
@@ -392,7 +392,7 @@
                    <x>0</x>
                    <y>0</y>
                    <width>500</width>
-                   <height>100</height>
+                   <height>130</height>
                   </rect>
                  </property>
                  <property name="sizePolicy">
@@ -404,13 +404,13 @@
                  <property name="minimumSize">
                   <size>
                    <width>500</width>
-                   <height>0</height>
+                   <height>130</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
-                   <height>100</height>
+                   <height>150</height>
                   </size>
                  </property>
                  <property name="verticalScrollBarPolicy">
@@ -425,6 +425,16 @@
                  <row>
                   <property name="text">
                    <string>1</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>New Row</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>New Row</string>
                   </property>
                  </row>
                  <column>
@@ -459,7 +469,7 @@
                    <x>0</x>
                    <y>0</y>
                    <width>500</width>
-                   <height>100</height>
+                   <height>130</height>
                   </rect>
                  </property>
                  <property name="sizePolicy">
@@ -471,13 +481,13 @@
                  <property name="minimumSize">
                   <size>
                    <width>500</width>
-                   <height>100</height>
+                   <height>130</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
-                   <height>100</height>
+                   <height>150</height>
                   </size>
                  </property>
                  <property name="verticalScrollBarPolicy">
