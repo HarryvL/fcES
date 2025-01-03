@@ -37,8 +37,11 @@ import dummyES
 import FreeCAD
 import FreeCADGui
 from PySide2 import QtWidgets, QtGui, QtCore
+from PySide2.QtWidgets import QTableWidgetItem
 
 global FCmw
+global QtWidgets, QtGui, QtCore, QTableWidgetItem
+
 FCmw = FreeCADGui.getMainWindow()
 global dir_name
 dir_name = os.path.dirname(dummyES.file_path())
@@ -66,7 +69,6 @@ class fcESWorkbench(Workbench):
         return "Gui::PythonWorkbench"
 
     def Initialize(self):
-        from PySide2 import QtGui
         self.appendToolbar("fcES", [])
         self.appendMenu("fcES", [])
         self.palette_warning = QtGui.QPalette()
@@ -76,13 +78,12 @@ class fcESWorkbench(Workbench):
         # self.palette.setColor(QtGui.QPalette.Text, QtGui.QColor("red"))
 
     def Activated(self):
-        from PySide2 import QtCore
         global fcES_window
 
         import dummyES
         self.dir_name = os.path.dirname(dummyES.file_path())
         self.doc = FreeCAD.activeDocument()
-        if self.doc == None:
+        if self.doc is None:
             self.doc = FreeCAD.newDocument("fcES")
         self.file_name = self.doc.Label
         self.macro_file_path = os.path.join(self.dir_name, "source code", "fcES.FCMacro")
@@ -108,11 +109,6 @@ class fcESWorkbench(Workbench):
                 self.workbench_instance.file_name = doc.Label
                 self.workbench_instance.save_clicked()  # save under new file name
 
-            def slotFinishSaveDocument(self, doc, prop):
-                self.workbench_instance.save_clicked()  # save under old file name
-                self.workbench_instance.file_name = doc.Label
-                self.workbench_instance.save_clicked()  # save under new file name
-
         self.obs = DocObserver(self)
         FreeCAD.addDocumentObserver(self.obs)
 
@@ -124,8 +120,10 @@ class fcESWorkbench(Workbench):
         fcES_window.saveBtn.clicked.connect(self.save_clicked)
         fcES_window.beamBtn.clicked.connect(self.btn_state)
         fcES_window.tankBtn.clicked.connect(self.btn_state)
+        fcES_window.tendonBtn.clicked.connect(self.btn_state)
         #
         fcES_window.num_el.textChanged.connect(self.num_el_changed)
+        fcES_window.tendon_load.textChanged.connect(self.tendon_load_changed)
         fcES_window.node_prop.cellChanged.connect(self.node_cell_changed)
         fcES_window.beam_prop.cellChanged.connect(self.beam_cell_changed)
         fcES_window.tank_prop.cellChanged.connect(self.tank_cell_changed)
@@ -134,6 +132,7 @@ class fcESWorkbench(Workbench):
 
         self.analysis_type_default = "beam"
         self.num_el_default = 1
+        self.tendon_load_default = 0.0
         self.node_object_default = {1: ["0.0", "n", "n", "0.0", "0.0"], 2: ["1.0", "n", "n", "0.0", "0.0"]}
         self.beam_object_default = {1: ["1.0", "1.0", "0.0", "0.0"]}
         self.tank_object_default = {1: ["1.0", "1.0", "1.0", "0.3", "0.0", "0.0"]}
@@ -142,6 +141,7 @@ class fcESWorkbench(Workbench):
         self.node_obj = self.node_object_default.copy()
         self.beam_obj = self.beam_object_default.copy()
         self.tank_obj = self.tank_object_default.copy()
+        self.tendon_load = self.tendon_load_default
 
         fcES_window.beam_tank.setCurrentIndex(0)
 
@@ -150,36 +150,43 @@ class fcESWorkbench(Workbench):
 
         FCmw.addDockWidget(QtCore.Qt.RightDockWidgetArea, fcES_window.dw)
 
+        fcES_window.dw.setMaximumWidth(550)
+
     def node_cell_changed(self, r, c):
-        from PySide2.QtWidgets import QTableWidgetItem
         if c == 1 or c == 2:
             if fcES_window.node_prop.item(r, c).text() not in ["y", "n"]:
                 fcES_window.node_prop.setItem(r, c, QTableWidgetItem("n"))
         else:
             try:
                 float(fcES_window.node_prop.item(r, c).text())
-            except:
+            except ValueError:
                 fcES_window.node_prop.setItem(r, c, QTableWidgetItem("0.0"))
+            except Exception as e:
+                print(f"Unexpected error: {e}")
+                raise
         self.node_obj[r + 1][c] = fcES_window.node_prop.item(r, c).text()
 
     def beam_cell_changed(self, r, c):
-        from PySide2.QtWidgets import QTableWidgetItem
         try:
             float(fcES_window.beam_prop.item(r, c).text())
-        except:
+        except ValueError:
             fcES_window.beam_prop.setItem(r, c, QTableWidgetItem("0.0"))
+        except Exception as e:
+            print(f"Unexpected error: {e}")
+            raise
         self.beam_obj[r + 1][c] = fcES_window.beam_prop.item(r, c).text()
 
     def tank_cell_changed(self, r, c):
-        from PySide2.QtWidgets import QTableWidgetItem
         try:
             float(fcES_window.tank_prop.item(r, c).text())
-        except:
+        except ValueError:
             fcES_window.tank_prop.setItem(r, c, QTableWidgetItem("0.0"))
+        except Exception as e:
+            print(f"Unexpected error: {e}")
+            raise
         self.tank_obj[r + 1][c] = fcES_window.tank_prop.item(r, c).text()
 
     def Deactivated(self):
-
         try:
             if fcES_window.dw.isVisible():
                 fcES_window.dw.setVisible(False)
@@ -189,8 +196,6 @@ class fcESWorkbench(Workbench):
         FreeCAD.removeDocumentObserver(self.obs)
 
     def start_clicked(self):
-        from PySide2 import QtWidgets
-
         self.save_clicked()
 
         try:
@@ -229,6 +234,9 @@ class fcESWorkbench(Workbench):
             for key, values in self.tank_obj.items():
                 file.write(f"tank {key}: {' '.join(map(str, values))}\n")
 
+            file.write(f"tendon_load = {self.tendon_load}\n")
+
+
     def open_file(self):
         inp_file_path = os.path.join(self.dir_name, "control files", self.file_name + '.inp')
         print("open file:", inp_file_path)
@@ -259,10 +267,14 @@ class fcESWorkbench(Workbench):
                         key, values = line.split(":")
                         key = int(key.split()[1])  # Extract the tank number
                         self.tank_obj[key] = values.strip().split()
+                    elif line.startswith("tendon_load"):
+                        self.tendon_load = float(line.split("=")[1].strip())
+
 
         except FileNotFoundError:
             self.analysis_type = self.analysis_type_default
             self.num_el = self.num_el_default
+            self.tendon_load = self.tendon_load_default
             self.node_obj = self.node_object_default
             self.beam_obj = self.beam_object_default
             self.tank_obj = self.tank_object_default
@@ -291,6 +303,12 @@ class fcESWorkbench(Workbench):
                 del self.tank_obj[el + 1]
         self.fill_UI()
 
+    def tendon_load_changed(self):
+        val = fcES_window.tendon_load.text()
+        if val == "" or val == "-" or float(val) < 0.0:
+            val = "0.0"
+        self.tendon_load = float(val)
+
     def btn_state(self):
         if fcES_window.beamBtn.isChecked():
             self.analysis_type = "beam"
@@ -298,14 +316,21 @@ class fcESWorkbench(Workbench):
         if fcES_window.tankBtn.isChecked():
             self.analysis_type = "tank"
             fcES_window.beam_tank.setCurrentIndex(1)
+        if fcES_window.tendonBtn.isChecked():
+            self.analysis_type = "tendon"
+            fcES_window.beam_tank.setCurrentIndex(1)
 
     def fill_UI(self):
-        from PySide2.QtWidgets import QTableWidgetItem
         if self.analysis_type == "beam":
             fcES_window.beamBtn.setChecked(True)
-        else:
+        elif self.analysis_type == "tank":
             fcES_window.tankBtn.setChecked(True)
+        else:
+            fcES_window.tendonBtn.setChecked(True)
+
         fcES_window.num_el.setText(str(self.num_el))
+        if self.analysis_type != "beam":
+            fcES_window.tendon_load.setText(str(self.tendon_load))
         for node in self.node_obj:
             for col, val in enumerate(self.node_obj[node]):
                 fcES_window.node_prop.setItem(node - 1, col, QTableWidgetItem(self.node_obj[node][col]))

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>878</height>
+    <height>790</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,12 +19,12 @@
   <property name="minimumSize">
    <size>
     <width>0</width>
-    <height>0</height>
+    <height>350</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>16777215</width>
+    <width>600</width>
     <height>16777215</height>
    </size>
   </property>
@@ -40,7 +40,7 @@
    </property>
    <property name="maximumSize">
     <size>
-     <width>16777215</width>
+     <width>600</width>
      <height>16777215</height>
     </size>
    </property>
@@ -50,12 +50,12 @@
       <property name="minimumSize">
        <size>
         <width>100</width>
-        <height>130</height>
+        <height>107</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>524287</width>
+        <width>500</width>
         <height>1019</height>
        </size>
       </property>
@@ -71,7 +71,7 @@
        </property>
        <property name="maximumSize">
         <size>
-         <width>16777215</width>
+         <width>600</width>
          <height>1000</height>
         </size>
        </property>
@@ -86,9 +86,18 @@
           </property>
           <property name="maximumSize">
            <size>
-            <width>16777215</width>
+            <width>510</width>
             <height>1000</height>
            </size>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOn</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOn</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustToContents</enum>
           </property>
           <property name="widgetResizable">
            <bool>true</bool>
@@ -98,99 +107,101 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>562</width>
-             <height>760</height>
+             <width>492</width>
+             <height>658</height>
             </rect>
            </property>
            <property name="maximumSize">
             <size>
-             <width>16777215</width>
+             <width>500</width>
              <height>1000</height>
             </size>
            </property>
            <property name="contextMenuPolicy">
             <enum>Qt::NoContextMenu</enum>
            </property>
-           <widget class="QGroupBox" name="groupBox">
-            <property name="geometry">
-             <rect>
-              <x>9</x>
-              <y>9</y>
-              <width>543</width>
-              <height>600</height>
-             </rect>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>500</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>1000</height>
-             </size>
-            </property>
-            <property name="title">
-             <string/>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout">
-             <item>
-              <widget class="QGroupBox" name="groupBox_2">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>140</height>
-                </size>
-               </property>
-               <property name="title">
-                <string/>
-               </property>
-               <layout class="QGridLayout" name="gridLayout_2">
-                <item row="0" column="1">
-                 <layout class="QHBoxLayout" name="horizontalLayout_2">
-                  <item>
-                   <widget class="QLineEdit" name="num_el">
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QGroupBox" name="groupBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>600</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>500</width>
+                <height>1100</height>
+               </size>
+              </property>
+              <property name="title">
+               <string/>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <item>
+                <widget class="QGroupBox" name="groupBox_2">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>450</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>450</width>
+                   <height>140</height>
+                  </size>
+                 </property>
+                 <property name="title">
+                  <string/>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_2">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_4">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>100</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>200</width>
+                      <height>100</height>
+                     </size>
+                    </property>
                     <property name="text">
-                     <string>1</string>
+                     <string>number of elements</string>
                     </property>
                    </widget>
                   </item>
-                  <item>
-                   <spacer name="horizontalSpacer">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                     <enum>QSizePolicy::Fixed</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>200</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                 </layout>
-                </item>
-                <item row="1" column="1">
-                 <layout class="QHBoxLayout" name="horizontalLayout">
-                  <item>
+                  <item row="3" column="1">
                    <widget class="QRadioButton" name="beamBtn">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>beam</string>
                     </property>
@@ -199,269 +210,90 @@
                     </property>
                    </widget>
                   </item>
-                  <item>
+                  <item row="4" column="0">
+                   <widget class="QLabel" name="label_2">
+                    <property name="text">
+                     <string>minimum tendon load</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="label">
+                    <property name="text">
+                     <string>analysis type</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="num_el">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>50</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="QLineEdit" name="tendon_load">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>0.0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="2">
                    <widget class="QRadioButton" name="tankBtn">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>tank</string>
                     </property>
                    </widget>
                   </item>
+                  <item row="3" column="3">
+                   <widget class="QRadioButton" name="tendonBtn">
+                    <property name="text">
+                     <string>tendon</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="2" colspan="2">
+                   <widget class="QLabel" name="label_3">
+                    <property name="text">
+                     <string>(for tendon analysis)</string>
+                    </property>
+                   </widget>
+                  </item>
                  </layout>
-                </item>
-                <item row="1" column="0">
-                 <widget class="QLabel" name="label">
-                  <property name="text">
-                   <string>analysis type</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0">
-                 <widget class="QLabel" name="label_4">
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>100</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>number of elements</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QTableWidget" name="node_prop">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>500</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>130</height>
-                </size>
-               </property>
-               <property name="verticalScrollBarPolicy">
-                <enum>Qt::ScrollBarAlwaysOn</enum>
-               </property>
-               <property name="horizontalScrollBarPolicy">
-                <enum>Qt::ScrollBarAlwaysOn</enum>
-               </property>
-               <attribute name="horizontalHeaderDefaultSectionSize">
-                <number>70</number>
-               </attribute>
-               <row>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </row>
-               <row>
-                <property name="text">
-                 <string>2</string>
-                </property>
-               </row>
-               <column>
-                <property name="text">
-                 <string>nd coor.</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>fix disp.</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>fix rot.</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Force</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Moment</string>
-                </property>
-               </column>
-               <item row="0" column="0">
-                <property name="text">
-                 <string>0.0</string>
-                </property>
-               </item>
-               <item row="0" column="1">
-                <property name="text">
-                 <string>y</string>
-                </property>
-                <property name="textAlignment">
-                 <set>AlignCenter</set>
-                </property>
-               </item>
-               <item row="0" column="2">
-                <property name="text">
-                 <string>n</string>
-                </property>
-                <property name="textAlignment">
-                 <set>AlignCenter</set>
-                </property>
-               </item>
-               <item row="0" column="3">
-                <property name="text">
-                 <string>0.0</string>
-                </property>
-               </item>
-               <item row="0" column="4">
-                <property name="text">
-                 <string>0.0</string>
-                </property>
-               </item>
-               <item row="1" column="0">
-                <property name="text">
-                 <string>1.0</string>
-                </property>
-               </item>
-               <item row="1" column="1">
-                <property name="text">
-                 <string>y</string>
-                </property>
-                <property name="textAlignment">
-                 <set>AlignCenter</set>
-                </property>
-               </item>
-               <item row="1" column="2">
-                <property name="text">
-                 <string>n</string>
-                </property>
-                <property name="textAlignment">
-                 <set>AlignCenter</set>
-                </property>
-               </item>
-               <item row="1" column="3">
-                <property name="text">
-                 <string>0.0</string>
-                </property>
-               </item>
-               <item row="1" column="4">
-                <property name="text">
-                 <string>0.0</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-             <item>
-              <widget class="QTabWidget" name="beam_tank">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>500</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>170</height>
-                </size>
-               </property>
-               <property name="currentIndex">
-                <number>0</number>
-               </property>
-               <widget class="QWidget" name="Beam">
-                <attribute name="title">
-                 <string>Beam</string>
-                </attribute>
-                <widget class="QTableWidget" name="beam_prop">
-                 <property name="geometry">
-                  <rect>
-                   <x>0</x>
-                   <y>0</y>
-                   <width>500</width>
-                   <height>130</height>
-                  </rect>
-                 </property>
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>500</width>
-                   <height>130</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>150</height>
-                  </size>
-                 </property>
-                 <property name="verticalScrollBarPolicy">
-                  <enum>Qt::ScrollBarAlwaysOn</enum>
-                 </property>
-                 <property name="horizontalScrollBarPolicy">
-                  <enum>Qt::ScrollBarAlwaysOn</enum>
-                 </property>
-                 <attribute name="horizontalHeaderDefaultSectionSize">
-                  <number>70</number>
-                 </attribute>
-                 <row>
-                  <property name="text">
-                   <string>1</string>
-                  </property>
-                 </row>
-                 <column>
-                  <property name="text">
-                   <string>k</string>
-                  </property>
-                 </column>
-                 <column>
-                  <property name="text">
-                   <string>EI</string>
-                  </property>
-                 </column>
-                 <column>
-                  <property name="text">
-                   <string>q1</string>
-                  </property>
-                 </column>
-                 <column>
-                  <property name="text">
-                   <string>q2</string>
-                  </property>
-                 </column>
                 </widget>
-               </widget>
-               <widget class="QWidget" name="Tank">
-                <attribute name="title">
-                 <string>Tank</string>
-                </attribute>
-                <widget class="QTableWidget" name="tank_prop">
-                 <property name="geometry">
-                  <rect>
-                   <x>0</x>
-                   <y>0</y>
-                   <width>500</width>
-                   <height>130</height>
-                  </rect>
-                 </property>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="node_prop">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -470,14 +302,14 @@
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>500</width>
-                   <height>130</height>
+                   <width>450</width>
+                   <height>0</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>16777215</width>
-                   <height>150</height>
+                   <width>450</width>
+                   <height>130</height>
                   </size>
                  </property>
                  <property name="verticalScrollBarPolicy">
@@ -494,152 +326,395 @@
                    <string>1</string>
                   </property>
                  </row>
+                 <row>
+                  <property name="text">
+                   <string>2</string>
+                  </property>
+                 </row>
                  <column>
                   <property name="text">
-                   <string>R</string>
+                   <string>nd coor.</string>
                   </property>
                  </column>
                  <column>
                   <property name="text">
-                   <string>E</string>
+                   <string>fix disp.</string>
                   </property>
                  </column>
                  <column>
                   <property name="text">
-                   <string>t</string>
+                   <string>fix rot.</string>
                   </property>
                  </column>
                  <column>
                   <property name="text">
-                   <string>nu</string>
+                   <string>Force</string>
                   </property>
                  </column>
                  <column>
                   <property name="text">
-                   <string>q1</string>
-                  </property>
-                 </column>
-                 <column>
-                  <property name="text">
-                   <string>q2</string>
+                   <string>Moment</string>
                   </property>
                  </column>
                  <item row="0" column="0">
                   <property name="text">
-                   <string>1000.0</string>
+                   <string>0.0</string>
                   </property>
                  </item>
                  <item row="0" column="1">
                   <property name="text">
-                   <string>210000.0</string>
+                   <string>y</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
                   </property>
                  </item>
                  <item row="0" column="2">
                   <property name="text">
-                   <string>4</string>
+                   <string>n</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
                   </property>
                  </item>
                  <item row="0" column="3">
                   <property name="text">
-                   <string>0.3</string>
+                   <string>0.0</string>
                   </property>
                  </item>
                  <item row="0" column="4">
                   <property name="text">
+                   <string>0.0</string>
+                  </property>
+                 </item>
+                 <item row="1" column="0">
+                  <property name="text">
                    <string>1.0</string>
                   </property>
                  </item>
-                 <item row="0" column="5">
+                 <item row="1" column="1">
                   <property name="text">
-                   <string>1.0</string>
+                   <string>y</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="1" column="2">
+                  <property name="text">
+                   <string>n</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="1" column="3">
+                  <property name="text">
+                   <string>0.0</string>
+                  </property>
+                 </item>
+                 <item row="1" column="4">
+                  <property name="text">
+                   <string>0.0</string>
                   </property>
                  </item>
                 </widget>
-               </widget>
-              </widget>
-             </item>
-             <item>
-              <widget class="QGroupBox" name="actionBox">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>70</height>
-                </size>
-               </property>
-               <property name="title">
-                <string/>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_3">
-                <item>
-                 <spacer name="horizontalSpacer_3">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="startBtn">
-                  <property name="text">
-                   <string>start</string>
-                  </property>
+               </item>
+               <item>
+                <widget class="QTabWidget" name="beam_tank">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>450</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>450</width>
+                   <height>160</height>
+                  </size>
+                 </property>
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <widget class="QWidget" name="Beam">
+                  <attribute name="title">
+                   <string>Beam</string>
+                  </attribute>
+                  <widget class="QTableWidget" name="beam_prop">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>450</width>
+                     <height>130</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>450</width>
+                     <height>130</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>450</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <property name="verticalScrollBarPolicy">
+                    <enum>Qt::ScrollBarAlwaysOn</enum>
+                   </property>
+                   <property name="horizontalScrollBarPolicy">
+                    <enum>Qt::ScrollBarAlwaysOn</enum>
+                   </property>
+                   <attribute name="horizontalHeaderDefaultSectionSize">
+                    <number>70</number>
+                   </attribute>
+                   <row>
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                   </row>
+                   <column>
+                    <property name="text">
+                     <string>k</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>EI</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>q1</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>q2</string>
+                    </property>
+                   </column>
+                  </widget>
                  </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_4">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="saveBtn">
-                  <property name="text">
-                   <string>save</string>
-                  </property>
+                 <widget class="QWidget" name="Tank">
+                  <attribute name="title">
+                   <string>Tank</string>
+                  </attribute>
+                  <widget class="QTableWidget" name="tank_prop">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>450</width>
+                     <height>130</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>450</width>
+                     <height>130</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>450</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <property name="verticalScrollBarPolicy">
+                    <enum>Qt::ScrollBarAlwaysOn</enum>
+                   </property>
+                   <property name="horizontalScrollBarPolicy">
+                    <enum>Qt::ScrollBarAlwaysOn</enum>
+                   </property>
+                   <attribute name="horizontalHeaderDefaultSectionSize">
+                    <number>70</number>
+                   </attribute>
+                   <row>
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                   </row>
+                   <column>
+                    <property name="text">
+                     <string>R</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>E</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>t</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>nu</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>q1</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>q2</string>
+                    </property>
+                   </column>
+                   <item row="0" column="0">
+                    <property name="text">
+                     <string>1000.0</string>
+                    </property>
+                   </item>
+                   <item row="0" column="1">
+                    <property name="text">
+                     <string>210000.0</string>
+                    </property>
+                   </item>
+                   <item row="0" column="2">
+                    <property name="text">
+                     <string>4</string>
+                    </property>
+                   </item>
+                   <item row="0" column="3">
+                    <property name="text">
+                     <string>0.3</string>
+                    </property>
+                   </item>
+                   <item row="0" column="4">
+                    <property name="text">
+                     <string>1.0</string>
+                    </property>
+                   </item>
+                   <item row="0" column="5">
+                    <property name="text">
+                     <string>1.0</string>
+                    </property>
+                   </item>
+                  </widget>
                  </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_5">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
-              </widget>
-             </item>
-            </layout>
-           </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="actionBox">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>70</height>
+                  </size>
+                 </property>
+                 <property name="title">
+                  <string/>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <spacer name="horizontalSpacer_3">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="startBtn">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>start</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_4">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="saveBtn">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>save</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_5">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </widget>
         </item>

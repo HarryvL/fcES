@@ -1,12 +1,7 @@
 analysis_type = beam
-num_el = 3
-node 1: 0.0 y n 0.0 0.0
+num_el = 1
+node 1: 0.0 n n 0.0 0.0
 node 2: 1.0 n n 0.0 0.0
-node 3: 2.0 y n 0.0 0.0
-node 4: 2.0 y n 0.0 0.0
-beam 1: 1 1 1 1
-beam 2: 1 1 1 1
-beam 3: 1 1 1 1
-tank 1: 1.0 1 1 0.3 1 1
-tank 2: 1.0 1 1 0.3 1 1
-tank 3: 1.0 1 1 0.3 1 1
+beam 1: 1.0 1.0 0.0 0.0
+tank 1: 1.0 1.0 1.0 0.3 0.0 0.0
+tendon_load = 0.0
