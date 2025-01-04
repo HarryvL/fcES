@@ -457,7 +457,7 @@ def main():
             change = np.linalg.norm(x_tot - x_tot_old)
 
             for nn, xn in enumerate(x_tot):
-                if xn < tendon_load:
+                if xn < tendon_load / R:
                     active[nn] = 0
                     x_tot[nn] = 0.0
 
@@ -499,7 +499,7 @@ def main():
                 "\n=========================================================================================================================\n\n")
             f.write("{0: >7}{1: >10}\n".format("tendon", "load"))
             for i, ft in enumerate(x_tot):
-                f.write("{0: >7d}{1: >10.2e}\n".format(i, ft))
+                f.write("{0: >7d}{1: >10.2e}\n".format(i, ft * R))
 
         f.write(
             "\n=========================================================================================================================\n\n")
