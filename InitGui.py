@@ -36,8 +36,8 @@ import sys
 import dummyES
 import FreeCAD
 import FreeCADGui
-from PySide2 import QtWidgets, QtGui, QtCore
-from PySide2.QtWidgets import QTableWidgetItem
+from PySide import QtWidgets, QtGui, QtCore
+from PySide.QtWidgets import QTableWidgetItem
 
 global FCmw
 global QtWidgets, QtGui, QtCore, QTableWidgetItem
